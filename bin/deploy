@@ -12,3 +12,5 @@ aws s3api put-bucket-versioning --bucket "$1"  --versioning-configuration Status
 aws s3 cp master-CloudFormation-templates-continuous-deployment.yaml "s3://${1}"
 
 aws s3 cp --recursive templates/ "s3://${1}/templates"
+
+aws s3 cp --recursive doc/ "s3://${1}/doc"
